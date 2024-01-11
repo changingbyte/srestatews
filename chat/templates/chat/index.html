@@ -1,0 +1,15 @@
+{% extends 'layouts/default/page.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% load i18n %}
+
+{% block content %}
+
+    What chat room would you like to enter?<br>
+    <h1 > User's Online</h1>
+    {% for user in user_list %}
+    <strong><a href="{% url 'room' user.username %}">{{user}}</a></strong> <br> 
+    <br>
+    {% endfor %}
+
+{% endblock %}
